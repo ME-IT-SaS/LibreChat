@@ -15,7 +15,7 @@ services:
     extra_hosts:
     - "host.docker.internal:host-gateway"
     env_file:
-      - .env
+      - stack.env
     environment:
       - HOST=0.0.0.0
       - NODE_ENV=production
@@ -54,7 +54,7 @@ services:
     # ports: # Uncomment this to access meilisearch from outside docker
     #   - 7700:7700 # if exposing these ports, make sure your master key is not the default value
     env_file:
-      - .env
+      - stack.env
     environment:
       - MEILI_HOST=http://meilisearch:7700
       - MEILI_NO_ANALYTICS=true
