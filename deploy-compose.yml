@@ -42,7 +42,8 @@ services:
     container_name: chat-mongodb
     # ports:  # Uncomment this to access mongodb from outside docker, not safe in deployment
     #   - 27018:27017
-    image: mongo
+    # Modify to mongo:4.4.18 for missing AVX CPU
+    image: mongo:4.4.18
     restart: always
     volumes:
       - ./data-node:/data/db
